@@ -317,6 +317,12 @@ variable "create_eks" {
   default     = true
 }
 
+variable "node_groups_create_before_destroy" {
+  description = "Create before destroy the node groups"
+  type = bool
+  default = true
+}
+
 variable "node_groups_defaults" {
   description = "Map of values to be applied to all node groups. See `node_groups` module's documentation for more details"
   type        = any

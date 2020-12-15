@@ -8,6 +8,8 @@ module "node_groups" {
   node_groups_defaults   = var.node_groups_defaults
   node_groups            = var.node_groups
 
+  create_before_destroy  = var.node_groups_create_before_destroy
+
   # Hack to ensure ordering of resource creation.
   # This is a homemade `depends_on` https://discuss.hashicorp.com/t/tips-howto-implement-module-depends-on-emulation/2305/2
   # Do not create node_groups before other resources are ready and removes race conditions

@@ -42,3 +42,9 @@ variable "ng_depends_on" {
   type        = any
   default     = null
 }
+
+variable "create_before_destroy" {
+  description = "Create before destroy the node groups"
+  type = bool
+  default = true
+}
